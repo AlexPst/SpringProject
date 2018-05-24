@@ -1,7 +1,24 @@
 <html>
 <body>
 
-{{some}}
+<div>
+    <form method="post">
+        <input type="text" name="text" placeholder="Введите сообщение"/>
+        <input type="text" name="tag" placeholder="Тэг"/>
+        <button type="submit">Добавит</button>
+
+    </form>
+</div>
+
+<div>Список сообщений</div>
+{{#Messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{text}}</span>
+        <i>{{tag}}</i>
+
+    </div>
+{{/Messages}}
 </body>
 
 </html>
